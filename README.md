@@ -14,26 +14,33 @@ The rules are as follows:
 * When the numbers are the same...
   * yellow trumps (beats) green
   * red trumps (beats) yellow
-* If both cards have the same number and color, card1 always wins
+* If both cards have the same number and color, the first card played always wins
   * it was played first
 
 **Inputs:**
 ----------
-cardTrumpChecker() receives two inputs (tuples): **card1** and **card2**
+cardTrumpChecker() receives two inputs (tuples): the first card and the second card
 
 * NOTE: each card will be a tuple, like so: **(*card*, *rank*, *color*)**
   * **card** is a string: *"card1"* or *"card2"*
   * **rank** is an integer: between 1 and 10
   * **color** is an string: *"red"* *"yellow"* or *"green"*
-  * Examle: ("card1", 9, "red")
+  * Example: ("card1", 9, "red")
+  * WARNING: regardless of the name of the first or second card, the first tuple is always considered the first card played (in the off-chance the card has a different name than 'card1' or 'card2')
 
 **Output:**
 ------------
 cardTrumpChecker() returns 1 output (a string): **card**
 
+ * NOTE: always return the value of the first card (example: if the first card name is `"Jeff"`, return `"Jeff"` and not the string `"card1"`)
+
 **Hints:**
 ------------
-For this challenge, since you are using tuples, you're going to want to review indexing with tuples.
+For this challenge, since you are using tuples, you're going to want to review indexing with tuples (or unpacking a tuple).
+For exceeds, be careful with the names of the cards, 
+* they could be a different name than `card1` or `card2`.
+* they could even be switched.
+* Example: if the card that wins is called `phred`, then your function should return `phred`
 
 **Examples:**
 inputs => output/s

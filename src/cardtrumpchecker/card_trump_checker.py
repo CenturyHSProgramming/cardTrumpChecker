@@ -1,9 +1,12 @@
-# cardTrumpChecker.py
-# by _______
+"""
+card_trump_checker.py
+by _______
+"""
 
-# Write function defintion: cardTrumpChecker
 
+# Write function defintion: card_trump_checker
 # Make sure it returns a value
+
 
 if __name__ == '__main__':
     # Call the function in here if you want to test it

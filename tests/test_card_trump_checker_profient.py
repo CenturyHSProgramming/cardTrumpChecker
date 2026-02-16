@@ -74,6 +74,29 @@ def test_card_trump_checkerForYellowBeatsGreen():
     assert result == expected
 
 
+def test_card_trump_checkerForHighNum_HighColor():
+    # Capture the results of the function
+    result = card_trump_checker.card_trump_checker(('card1', 9, 'red'),
+                                               ('card2', 7, 'green'))
+    expected = "card1"
+    assert result == expected
+
+
+def test_card_trump_checkerForGreenOverRed():
+    # Capture the results of the function
+    result = card_trump_checker.card_trump_checker(('card1', 7, 'red'),
+                                               ('card2', 8, 'green')                                         )
+    expected = "card2"
+    assert result == expected
+
+
+def test_card_trump_checkerForLowNumHighColor_2():
+    result = card_trump_checker.card_trump_checker(('card1', 2, 'yellow'),
+                                               ('card2', 6, 'red'))
+    expected = "card2"
+    assert result == expected
+
+
 def test_card_trump_checkerForHigherNumberAlwaysWins():
     result = card_trump_checker.card_trump_checker(('card1', 3, 'red'),
                                                ('card2', 8, 'green'))
